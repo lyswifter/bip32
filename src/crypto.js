@@ -5,6 +5,7 @@ const hmac_1 = require("@noble/hashes/hmac");
 const ripemd160_1 = require("@noble/hashes/ripemd160");
 const sha256_1 = require("@noble/hashes/sha256");
 const sha512_1 = require("@noble/hashes/sha512");
+const Buffer = require('safe-buffer').Buffer;
 function hash160(buffer) {
     const sha256Hash = (0, sha256_1.sha256)(Uint8Array.from(buffer));
     return Buffer.from((0, ripemd160_1.ripemd160)(sha256Hash));

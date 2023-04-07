@@ -7,6 +7,7 @@ const base_1 = require("@scure/base");
 const sha256_1 = require("@noble/hashes/sha256");
 const typeforce = require('typeforce');
 const wif = require('wif');
+const Buffer = require('safe-buffer').Buffer;
 const _bs58check = (0, base_1.base58check)(sha256_1.sha256);
 const bs58check = {
     encode: (data) => _bs58check.encode(Uint8Array.from(data)),
